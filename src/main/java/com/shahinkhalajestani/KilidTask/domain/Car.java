@@ -1,18 +1,20 @@
 package com.shahinkhalajestani.KilidTask.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
+@JsonIgnoreProperties
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
